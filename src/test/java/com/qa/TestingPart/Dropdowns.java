@@ -19,7 +19,7 @@ public class Dropdowns extends BaseTest {
 	@Test
 	public void autoSuggestions() {
 
-		driver = launchBrowser("ProtoCommerceUrl");
+		driver = launchBrowser("PracticeUrl");
 		driver.findElement(By.id("autocomplete")).sendKeys("au");
 		List<WebElement> lists = driver.findElements(By.cssSelector(".ui-menu-item div"));
 		for (int i = 0; i < lists.size(); i++) {
@@ -34,7 +34,7 @@ public class Dropdowns extends BaseTest {
 	@Test
 	public void staticDropdowns() {
 
-		driver = launchBrowser("ProtoCommerceUrl");
+		driver = launchBrowser("PracticeUrl");
 		WebElement element = driver.findElement(By.id("dropdown-class-example"));
 		utils.selectDropdown(element).selectByVisibleText("Option2");
 		WebElement selectedOption = utils.selectDropdown(element).getFirstSelectedOption();

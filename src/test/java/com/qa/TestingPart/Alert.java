@@ -13,7 +13,7 @@ public class Alert extends BaseTest {
 	@Test
 	public void alertEx() throws Exception {
 
-		driver = launchBrowser("ProtoCommerceUrl");
+		driver = launchBrowser("PracticeUrl");
 		driver.findElement(By.cssSelector("#name")).sendKeys("Suhail");
 		driver.findElement(By.id("alertbtn")).click();
 		Thread.sleep(2000);

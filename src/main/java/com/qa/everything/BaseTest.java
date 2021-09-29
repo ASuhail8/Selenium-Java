@@ -21,7 +21,8 @@ public class BaseTest {
 
 	public WebDriver launchBrowser(String urlStringName) {
 		String url;
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\abdul\\Desktop\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"D:\\Abdulla Suhail\\work\\SuhailWorkSpace\\Selenium-Java\\drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		try {
 			url = loadProperties(urlStringName);
@@ -36,7 +37,7 @@ public class BaseTest {
 
 	@AfterMethod
 	public static void quitBrowser() {
-	//	driver.quit();
+		driver.quit();
 	}
 
 }
