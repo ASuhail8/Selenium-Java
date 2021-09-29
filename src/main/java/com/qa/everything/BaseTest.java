@@ -20,13 +20,13 @@ public class BaseTest {
 	}
 
 	public WebDriver launchBrowser(String urlStringName) {
-		String url;
+		//String url;
 		System.setProperty("webdriver.chrome.driver",
 				"chromedriver.exe");
 		driver = new ChromeDriver();
 		try {
-			url = loadProperties(urlStringName);
-			driver.get(url);
+		//	url = loadProperties(urlStringName);
+			driver.get("https://rahulshettyacademy.com/angularpractice/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -36,7 +36,7 @@ public class BaseTest {
 	}
 
 	@AfterMethod
-	public static void quitBrowser() {
+	public void quitBrowser() {
 		driver.quit();
 	}
 
