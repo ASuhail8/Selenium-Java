@@ -22,7 +22,7 @@ public class BaseTest {
 	public WebDriver launchBrowser(String urlStringName) {
 		String url;
 		System.setProperty("webdriver.chrome.driver",
-				"D:\\Abdulla Suhail\\work\\SuhailWorkSpace\\Selenium-Java\\drivers\\chromedriver.exe");
+				"chromedriver.exe");
 		driver = new ChromeDriver();
 		try {
 			url = loadProperties(urlStringName);
