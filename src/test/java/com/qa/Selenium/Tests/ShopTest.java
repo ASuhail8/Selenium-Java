@@ -6,7 +6,7 @@ import com.qa.everything.BaseTest;
 import com.qa.pages.CheckoutPage;
 import com.qa.pages.HomePage;
 import com.qa.pages.ShopPage;
-
+//Testing Cotinous release
 public class ShopTest extends BaseTest {
 
 	String[] items = { "Nokia Edge", "Blackberry" };
