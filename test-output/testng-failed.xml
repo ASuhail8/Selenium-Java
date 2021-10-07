@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.TestingPart.ActionsClass">
+      <class name="com.qa.TestingPart.ChildWindow">
         <methods>
-          <include name="actionEx"/>
-          <include name="quitBrowser"/>
+          <include name="window"/>
         </methods>
-      </class> <!-- com.qa.TestingPart.ActionsClass -->
+      </class> <!-- com.qa.TestingPart.ChildWindow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

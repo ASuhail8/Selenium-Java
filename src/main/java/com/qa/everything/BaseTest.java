@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	public static WebDriver driver;
@@ -20,13 +22,12 @@ public class BaseTest {
 	}
 
 	public WebDriver launchBrowser(String urlStringName) {
-		//String url;
-		System.setProperty("webdriver.chrome.driver",
-				"chromedriver.exe");
+		String url;
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		try {
-		//	url = loadProperties(urlStringName);
-			driver.get("https://rahulshettyacademy.com/angularpractice/");
+			url = loadProperties(urlStringName);
+			driver.get(url);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -34,10 +35,10 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		return driver;
 	}
-
+/*
 	@AfterMethod
 	public void quitBrowser() {
-		driver.quit();
+	//	driver.quit();
 	}
-
+*/
 }
